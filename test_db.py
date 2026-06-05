@@ -1,8 +1,10 @@
 import asyncio
 from sqlalchemy import text
 from app.core.database import engine
+from app.core.config import settings
 
 async def test_connection():
+
     try:
         # Iniciamos una conexión asíncrona con la base de datos
         async with engine.begin() as conn:
